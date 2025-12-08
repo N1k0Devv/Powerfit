@@ -72,7 +72,7 @@ body {
     color: black;
 }
 
-/* --- Navigation (Responsive Fix) --- */
+/* --- Navigation --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -102,6 +102,7 @@ body {
     font-weight: 700;
     color: white;
     text-decoration: none;
+    z-index: 1002; /* Ensures logo stays above mobile menu */
 }
 
 .nav-menu {
@@ -134,7 +135,7 @@ body {
 .hamburger {
     display: none;
     cursor: pointer;
-    z-index: 1001; /* Above menu */
+    z-index: 1002; /* Above menu overlay */
 }
 
 .bar {
@@ -154,6 +155,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 20px;
 }
 
 .hero-bg {
@@ -177,14 +179,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
     background: linear-gradient(to bottom, rgba(0,0,0,0.3), #0f0f0f);
 }
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 6rem);
-    line-height: 1;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1.1;
     margin-bottom: 20px;
     font-weight: 800;
 }
@@ -205,6 +206,7 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* --- Stats Banner --- */
@@ -252,8 +254,9 @@ body {
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .about-text p {
@@ -316,7 +319,7 @@ body {
 /* --- Gallery --- */
 .gallery { padding: 100px 0; background: #141414; }
 
-.section-header { text-align: center; margin-bottom: 60px; }
+.section-header { text-align: center; margin-bottom: 60px; padding: 0 10px; }
 .section-header p { color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
 
 .gallery-grid {
@@ -487,6 +490,17 @@ footer {
 }
 
 .footer-logo { margin-bottom: 20px; }
+
+/* New Style for the Footer Logo Image */
+.footer-img {
+    width: 80px; 
+    height: 80px; 
+    object-fit: contain; 
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
 .footer-social { margin-bottom: 30px; }
 .footer-social a {
     color: white;
@@ -513,17 +527,12 @@ footer {
 }
 
 /* --- Responsive Media Queries --- */
-@media (max-width: 968px) {
-    .about-container, .contact-wrapper { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .item-1 { grid-column: span 2; }
-    .experience-badge { bottom: 20px; right: 20px; width: 100px; height: 100px; }
-    .experience-badge span { font-size: 1.5rem; }
-}
 
-@media (max-width: 768px) {
-    /* Mobile Nav Fix */
+/* Tablet & Mobile Nav Logic (Triggers at 992px now) */
+@media (max-width: 992px) {
+    /* Navbar Adjustments */
     .hamburger { display: block; }
+    
     .hamburger.active .bar:nth-child(2) { opacity: 0; }
     .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
@@ -531,28 +540,46 @@ footer {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 0; /* Full screen coverage */
         flex-direction: column;
-        background-color: #0f0f0f;
+        background-color: #0f0f0f; /* Solid background */
         width: 100%;
-        height: calc(100vh - 80px);
+        height: 100vh;
         align-items: center;
         justify-content: center;
-        transition: 0.3s;
-        border-top: 1px solid rgba(255,255,255,0.1);
+        transition: 0.4s ease-in-out;
+        z-index: 1001; /* Behind hamburger, above content */
+        padding-top: 60px;
     }
 
     .nav-menu.active { left: 0; }
     
-    .nav-item { margin: 15px 0; }
-    .nav-link { font-size: 1.5rem; }
-    .nav-btn { width: 80%; text-align: center; }
+    .nav-item { margin: 20px 0; }
+    .nav-link { font-size: 1.5rem; font-weight: 700;}
+    .nav-btn { width: 80%; max-width: 300px; text-align: center; display: block;}
 
-    /* Other Mobile Adjustments */
+    /* Layout Adjustments */
+    .about-container, .contact-wrapper { grid-template-columns: 1fr; }
+    .about-img { margin-top: 40px; }
+    
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .item-1 { grid-column: span 2; }
+    
+    .experience-badge { bottom: 20px; right: 20px; width: 100px; height: 100px; }
+    .experience-badge span { font-size: 1.5rem; }
+    
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+}
+
+/* Mobile Phones (Under 576px) */
+@media (max-width: 576px) {
     .hero-content h1 { font-size: 3rem; }
-    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .stats-grid { grid-template-columns: 1fr; } /* Stack stats on small phones */
+    
     .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
     .gallery-item { height: 250px; }
     .item-1 { grid-column: span 1; grid-row: span 1; }
+    
     .contact-wrapper { padding: 30px 20px; }
+    .section-title { font-size: 2.2rem; }
 }
