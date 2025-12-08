@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2964/2964514.png" type="image/png">
-    <title>PowerFit Gym Kutaisi - Transform Your Life</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>PowerFit Gym | Kutaisi</title>
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
+
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                POWER<span class="text-accent">FIT</span>
-            </a>
+            <a href="#" class="nav-logo">POWER<span class="text-accent">FIT</span></a>
             
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -29,22 +26,21 @@
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="#staff" class="nav-link">Trainers</a></li>
+                <li class="nav-item"><a href="#trainers" class="nav-link">Trainers</a></li>
                 <li class="nav-item"><a href="#pricing" class="nav-link">Membership</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link nav-btn">Join Now</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link btn-nav">Join Now</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" alt="Gym Background">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070" alt="Gym Background">
             <div class="overlay"></div>
         </div>
-        <div class="hero-content reveal">
-            <h1>BUILD YOUR <br><span class="text-stroke">LEGACY</span></h1>
-            <p>Kutaisi's premier fitness destination. Elite equipment, expert coaching, and a community that drives you further.</p>
+        <div class="hero-content reveal-up">
+            <h1>BUILD YOUR <span style="display: block;" class="text-stroke">LEGACY</span></h1>
+            <p>Kutaisi's elite fitness destination. Professional equipment, expert coaching, and a community that drives you further.</p>
             <div class="hero-btns">
                 <a href="#pricing" class="btn btn-primary">Start Training</a>
                 <a href="#about" class="btn btn-outline">Learn More</a>
@@ -52,7 +48,7 @@
         </div>
     </section>
 
-    <div class="stats-banner reveal">
+    <div class="stats-banner">
         <div class="container stats-grid">
             <div class="stat-box">
                 <h3>1000+</h3>
@@ -77,16 +73,16 @@
         <div class="container about-container">
             <div class="about-text reveal-left">
                 <h4 class="section-tag">WHO WE ARE</h4>
-                <h2 class="section-title">MORE THAN JUST A GYM</h2>
-                <p>Founded in 2018, PowerFit has redefined fitness in Georgia. We don't just provide machines; we provide an environment designed for success. From our industrial-chic aesthetic to our biomechanically perfect equipment, every detail is curated for your performance.</p>
+                <h2 class="section-title">MORE THAN A GYM</h2>
+                <p>Founded in 2018, PowerFit has redefined fitness in Georgia. We provide an environment designed for success, from our industrial-chic aesthetic to our biomechanically perfect equipment.</p>
                 <ul class="about-features">
-                    <li><i class="fas fa-check-circle"></i> State-of-the-art Technogym equipment</li>
-                    <li><i class="fas fa-check-circle"></i> Dedicated functional training zones</li>
-                    <li><i class="fas fa-check-circle"></i> Clean, climate-controlled environment</li>
+                    <li><i class="fas fa-check-circle"></i> Technogym Equipment</li>
+                    <li><i class="fas fa-check-circle"></i> Functional Training Zone</li>
+                    <li><i class="fas fa-check-circle"></i> Climate Controlled</li>
                 </ul>
             </div>
             <div class="about-img reveal-right">
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop" alt="Gym Interior">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000" alt="Gym Interior">
                 <div class="experience-badge">
                     <span>6+</span>
                     <p>Years of<br>Excellence</p>
@@ -95,70 +91,73 @@
         </div>
     </section>
 
-    <section id="gallery" class="gallery">
+    <section id="trainers" class="trainers">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>THE FACILITY</h2>
-                <p>Where the work gets done</p>
+            <div class="section-header reveal-up">
+                <h4 class="section-tag">OUR TEAM</h4>
+                <h2 class="section-title">EXPERT COACHES</h2>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item item-1 reveal">
-                    <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=1000" alt="Cardio">
+            <div class="trainers-grid">
+                <div class="trainer-card reveal-up">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1000" alt="David">
+                        <div class="card-overlay">
+                            <h3>David Kipiani</h3>
+                            <span>Head Coach</span>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <div class="info-header">
+                            <h3>David Kipiani</h3>
+                            <button class="close-info"><i class="fas fa-times"></i></button>
+                        </div>
+                        <p class="role">Head Coach</p>
+                        <p class="bio">10 years experience in bodybuilding and strength conditioning. Specialized in contest prep.</p>
+                        <div class="socials">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-item item-2 reveal">
-                    <img src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=1000" alt="Weights">
-                </div>
-                <div class="gallery-item item-3 reveal">
-                    <img src="https://images.unsplash.com/photo-1623874514711-0f321325f318?q=80&w=1000" alt="Crossfit">
-                </div>
-                <div class="gallery-item item-4 reveal">
-                    <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?q=80&w=1000" alt="Training">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="staff" class="staff">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>EXPERT COACHES</h2>
-                <p>Guidance to reach your peak</p>
-            </div>
-            <div class="staff-grid">
-                <div class="staff-card reveal">
-                    <div class="staff-img">
-                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1000" alt="David Kipiani">
-                        <div class="staff-social">
+                <div class="trainer-card reveal-up">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000" alt="Ana">
+                        <div class="card-overlay">
+                            <h3>Ana Beridze</h3>
+                            <span>Nutritionist</span>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <div class="info-header">
+                            <h3>Ana Beridze</h3>
+                            <button class="close-info"><i class="fas fa-times"></i></button>
+                        </div>
+                        <p class="role">Nutritionist</p>
+                        <p class="bio">Certified nutritionist helping clients build sustainable eating habits and lifestyle changes.</p>
+                        <div class="socials">
                             <a href="#"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-                    <div class="staff-info">
-                        <h3>David Kipiani</h3>
-                        <span>Head Coach</span>
-                    </div>
                 </div>
-                <div class="staff-card reveal">
-                    <div class="staff-img">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000" alt="Ana Beridze">
-                        <div class="staff-social">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="trainer-card reveal-up">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1000" alt="Giorgi">
+                        <div class="card-overlay">
+                            <h3>Giorgi Tsereteli</h3>
+                            <span>Strength Coach</span>
                         </div>
                     </div>
-                    <div class="staff-info">
-                        <h3>Ana Beridze</h3>
-                        <span>Nutritionist</span>
-                    </div>
-                </div>
-                <div class="staff-card reveal">
-                    <div class="staff-img">
-                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1000" alt="Giorgi Tsereteli">
-                        <div class="staff-social">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                    <div class="trainer-info">
+                        <div class="info-header">
+                            <h3>Giorgi Tsereteli</h3>
+                            <button class="close-info"><i class="fas fa-times"></i></button>
                         </div>
-                    </div>
-                    <div class="staff-info">
-                        <h3>Giorgi Tsereteli</h3>
-                        <span>Strength Coach</span>
+                        <p class="role">Strength Coach</p>
+                        <p class="bio">Powerlifting champion focused on raw strength, technique, and injury prevention.</p>
+                        <div class="socials">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,44 +166,50 @@
 
     <section id="pricing" class="pricing">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>MEMBERSHIPS</h2>
-                <p>Invest in yourself</p>
+            <div class="section-header reveal-up">
+                <h4 class="section-tag">MEMBERSHIPS</h4>
+                <h2 class="section-title">INVEST IN YOURSELF</h2>
             </div>
             <div class="pricing-grid">
-                <div class="price-card reveal">
-                    <h3>Basic</h3>
-                    <div class="price">80₾<span>/mo</span></div>
+                <div class="price-card reveal-up">
+                    <div class="card-header">
+                        <h3>Basic</h3>
+                        <div class="price">80₾<span>/mo</span></div>
+                    </div>
                     <ul>
-                        <li><i class="fas fa-check"></i> Gym Access</li>
-                        <li><i class="fas fa-check"></i> Locker Room</li>
+                        <li><i class="fas fa-check"></i> Standard Gym Access</li>
+                        <li><i class="fas fa-check"></i> Locker Room & Showers</li>
                         <li><i class="fas fa-check"></i> Free WiFi</li>
-                        <li><i class="fas fa-times" style="color:#666"></i> Trainer Support</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Trainer Support</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Select Plan</a>
+                    <a href="#contact" class="btn btn-block btn-outline">Select Plan</a>
                 </div>
-                <div class="price-card popular reveal">
-                    <div class="badge">Most Popular</div>
-                    <h3>Standard</h3>
-                    <div class="price">150₾<span>/mo</span></div>
+                <div class="price-card popular reveal-up">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>Standard</h3>
+                        <div class="price">150₾<span>/mo</span></div>
+                    </div>
                     <ul>
-                        <li><i class="fas fa-check"></i> 24/7 Access</li>
-                        <li><i class="fas fa-check"></i> All Classes</li>
-                        <li><i class="fas fa-check"></i> Sauna Access</li>
-                        <li><i class="fas fa-check"></i> 1 Free Session</li>
+                        <li><i class="fas fa-check"></i> 24/7 Keycard Access</li>
+                        <li><i class="fas fa-check"></i> All Group Classes</li>
+                        <li><i class="fas fa-check"></i> Sauna Recovery Access</li>
+                        <li><i class="fas fa-check"></i> 1 Free PT Session</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Select Plan</a>
+                    <a href="#contact" class="btn btn-block btn-primary">Select Plan</a>
                 </div>
-                <div class="price-card reveal">
-                    <h3>VIP</h3>
-                    <div class="price">250₾<span>/mo</span></div>
+                <div class="price-card reveal-up">
+                    <div class="card-header">
+                        <h3>VIP Athlete</h3>
+                        <div class="price">250₾<span>/mo</span></div>
+                    </div>
                     <ul>
                         <li><i class="fas fa-check"></i> All Standard Perks</li>
-                        <li><i class="fas fa-check"></i> Unlimited Training</li>
-                        <li><i class="fas fa-check"></i> VIP Locker</li>
-                        <li><i class="fas fa-check"></i> Nutrition Plan</li>
+                        <li><i class="fas fa-check"></i> Unlimited Tanning</li>
+                        <li><i class="fas fa-check"></i> Private VIP Locker</li>
+                        <li><i class="fas fa-check"></i> Monthly Nutrition Plan</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Select Plan</a>
+                    <a href="#contact" class="btn btn-block btn-outline">Select Plan</a>
                 </div>
             </div>
         </div>
@@ -212,65 +217,36 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-wrapper reveal">
-                <div class="contact-info">
+            <div class="contact-wrapper reveal-up">
+                <div class="contact-text">
                     <h2>GET IN TOUCH</h2>
                     <p>Ready to start? Visit us today.</p>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>15 Rustaveli Avenue, Kutaisi</p>
-                        </div>
+                        <p>15 Rustaveli Avenue, Kutaisi</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+995 431 25 55 55</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Hours</h4>
-                            <p>Mon-Fri: 6am - 11pm<br>Sat-Sun: 8am - 10pm</p>
-                        </div>
+                        <p>+995 431 25 55 55</p>
                     </div>
                 </div>
                 <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea rows="4" placeholder="Message"></textarea>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <h2>POWER<span class="text-accent">FIT</span></h2>
-                <p>Strength. Community. Results.</p>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-        <div class="copyright">
+        <div class="container">
+            <h2>POWER<span class="text-accent">FIT</span></h2>
             <p>&copy; 2024 PowerFit Gym. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
