@@ -239,15 +239,15 @@ section {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO SECTION (UPDATED ALIGNMENT) --- */
 .hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Left align */
     position: relative;
-    padding: 100px 20px;
+    padding: 0 10%; /* Padding for left alignment */
     overflow: hidden;
 }
 
@@ -274,30 +274,30 @@ section {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        135deg,
+        90deg,
         rgba(10, 10, 10, 0.95) 0%,
-        rgba(10, 10, 10, 0.7) 50%,
-        rgba(255, 107, 53, 0.2) 100%
+        rgba(10, 10, 10, 0.7) 40%,
+        rgba(255, 107, 53, 0.1) 100%
     );
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    max-width: 900px;
+    text-align: left; /* Left align text */
+    max-width: 800px;
 }
 
 .hero-title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     overflow: hidden;
 }
 
 .title-line {
     display: block;
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(3rem, 8vw, 6.5rem);
     font-weight: 900;
-    line-height: 1;
+    line-height: 1.1;
     animation: slideInUp 1s ease forwards;
     opacity: 0;
     transform: translateY(100px);
@@ -320,11 +320,10 @@ section {
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     color: var(--gray);
     margin-bottom: 40px;
     max-width: 600px;
-    margin-left: auto;
     margin-right: auto;
     animation: fadeIn 1s ease 0.6s forwards;
     opacity: 0;
@@ -337,7 +336,7 @@ section {
 .hero-btns {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     animation: fadeIn 1s ease 0.9s forwards;
     opacity: 0;
@@ -347,39 +346,46 @@ section {
     position: relative;
     z-index: 2;
     display: flex;
-    gap: 50px;
-    margin-top: 80px;
-    padding: 40px 60px;
-    background: rgba(255, 255, 255, 0.05);
+    gap: 40px;
+    margin-top: 60px;
+    padding: 25px 35px; /* Tighter padding */
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border-left: 4px solid var(--primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     animation: slideInUp 1s ease 1.2s forwards;
     opacity: 0;
     transform: translateY(50px);
+    align-self: flex-start; /* Align entire box left */
+    margin-left: 0;
 }
 
 .stat-item {
-    text-align: center;
+    text-align: left;
+    min-width: 90px;
 }
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 900;
     color: var(--primary);
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
 .stat-plus {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--primary);
 }
 
 .stat-label {
-    font-size: 0.9rem;
-    color: var(--gray);
+    font-size: 0.8rem;
+    color: var(--light);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .scroll-indicator {
@@ -393,6 +399,7 @@ section {
     gap: 10px;
     animation: bounce 2s infinite;
     z-index: 2;
+    opacity: 0.5;
 }
 
 .mouse {
@@ -781,7 +788,7 @@ section {
     font-weight: 600;
 }
 
-/* --- TESTIMONIALS SECTION --- */
+/* --- TESTIMONIALS SECTION (UPDATED SLIDER FIX) --- */
 .testimonials {
     background: var(--dark-light);
     overflow: hidden;
@@ -790,21 +797,23 @@ section {
 .testimonial-slider {
     position: relative;
     overflow: hidden;
+    max-width: 800px; /* Added max-width to keep it readable */
+    margin: 0 auto;
 }
 
 .testimonial-track {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .testimonial-card {
-    min-width: 100%;
-    padding: 50px;
+    min-width: 100%; /* Takes up full width of the slider window */
+    padding: 40px 30px; /* Internal spacing instead of margins */
     background: var(--dark-lighter);
     border-radius: 20px;
     text-align: center;
-    margin: 0 15px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .testimonial-rating {
@@ -815,7 +824,7 @@ section {
 }
 
 .testimonial-text {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 30px;
     font-style: italic;
@@ -840,11 +849,13 @@ section {
 .testimonial-author h4 {
     font-size: 1.1rem;
     margin-bottom: 3px;
+    color: var(--white);
 }
 
 .testimonial-author span {
     color: var(--primary);
     font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .testimonial-nav {
@@ -865,6 +876,9 @@ section {
     font-size: 1.2rem;
     cursor: pointer;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-btn:hover {
@@ -1338,11 +1352,26 @@ section {
     .hamburger {
         display: flex;
     }
-
+    
+    /* Stats container mobile adjustments */
     .hero-stats {
-        flex-direction: column;
-        gap: 30px;
-        padding: 30px 40px;
+        width: 100%;
+        max-width: 400px;
+        align-self: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+        border-left: none;
+        border-top: 4px solid var(--primary);
+        margin-top: 50px;
+    }
+
+    .stat-item {
+        text-align: center;
+        min-width: auto;
     }
 
     .trainers-grid,
@@ -1410,5 +1439,36 @@ section {
     .tab-btn {
         padding: 12px 15px;
         font-size: 0.85rem;
+    }
+}
+
+/* --- HERO RESPONSIVE OVERRIDES --- */
+/* Specific overrides for the new left-aligned hero */
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        align-items: center;
+        text-align: center;
+        padding: 120px 20px 60px;
+    }
+    
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-btns {
+        justify-content: center;
     }
 }
